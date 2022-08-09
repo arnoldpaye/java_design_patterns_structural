@@ -7,6 +7,4 @@ public interface City {
   String getTemperatureScale();
   boolean getHasWeatherWarning();
   void setHasWeatherWarning(boolean hasWeatherWarning);
-
-
 }

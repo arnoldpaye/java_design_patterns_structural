@@ -1,11 +1,16 @@
 package bridge_pattern_example;
 
-import java.awt.Graphics;
+import java.awt.*;
 
-public abstract class Square extends Shape {
+public class Square extends Shape {
+  ColorShape colorShape;
 
-  public void draw(Graphics graphics) {
-    graphics.fillRect(5, 15, 50, 50);
+  public Square(ColorShape colorShape) {
+    this.colorShape = colorShape;
   }
 
+  public void draw(Graphics graphics) {
+    colorShape.setColor(graphics);
+    graphics.fillRect(5, 15, 50, 50);
+  }
 }

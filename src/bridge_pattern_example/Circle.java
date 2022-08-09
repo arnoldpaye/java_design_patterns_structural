@@ -2,12 +2,15 @@ package bridge_pattern_example;
 
 import java.awt.Graphics;
 
-public abstract class Circle extends Shape {
+public class Circle extends Shape {
+  ColorShape colorShape;
 
-  public void draw(Graphics graphics) {
-    graphics.fillOval(75, 15, 50, 50);
+  public Circle(ColorShape colorShape) {
+    this.colorShape = colorShape;
   }
 
-
-
+  public void draw(Graphics graphics) {
+    colorShape.setColor(graphics);
+    graphics.fillOval(75, 15, 50, 50);
+  }
 }

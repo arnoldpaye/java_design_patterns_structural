@@ -3,11 +3,9 @@ package bridge_pattern_example;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class RedTriangle extends Triangle{
-
-  public void draw(Graphics graphics) {
+public class RedColorShape implements ColorShape {
+  @Override
+  public void setColor(Graphics graphics) {
     graphics.setColor(Color.RED);
-    super.draw(graphics);
   }
-
 }

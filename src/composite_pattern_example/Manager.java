@@ -1,6 +1,6 @@
 package composite_pattern_example;
 
-public class Manager {
+public class Manager implements Payee {
   private String name;
 
   public Manager(String name) {

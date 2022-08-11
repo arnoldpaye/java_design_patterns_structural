@@ -1,6 +1,6 @@
 package composite_pattern_example;
 
-public class SalesPerson {
+public class SalesPerson implements Payee {
   private String name;
   private Manager manager;
 

@@ -2,28 +2,19 @@ package composite_pattern_exercise;
 
 import java.util.ArrayList;
 
-public class BookCollection {
+public class BookCollection implements Books {
 
-  private ArrayList<NonfictionBook> nonfictionBooks = new ArrayList();
-  private ArrayList<FictionBook> fictionBooks = new ArrayList();
+  private ArrayList<Books> books = new ArrayList();
 
-  public void addNonfictionBook(NonfictionBook nonfictionBook) {
-    nonfictionBooks.add(nonfictionBook);
-  }
-
-  public void addFictionBook(FictionBook fictionBook) {
-    fictionBooks.add(fictionBook);
+  public void addBook(Books book) {
+    books.add(book);
   }
 
   public void checkout() {
-    nonfictionBooks.forEach(NonfictionBook::checkout);
-    fictionBooks.forEach(FictionBook::checkout);
+    books.forEach(Books::checkout);
   }
 
   public void returnBook() {
-    nonfictionBooks.forEach(NonfictionBook::returnBook);
-    fictionBooks.forEach(FictionBook::returnBook);
+    books.forEach(Books::returnBook);
   }
-
-
 }

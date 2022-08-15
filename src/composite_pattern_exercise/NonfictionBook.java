@@ -1,6 +1,6 @@
 package composite_pattern_exercise;
 
-public class NonfictionBook {
+public class NonfictionBook implements Books {
 
   String name;
   boolean checkedOut;
@@ -27,5 +27,4 @@ public class NonfictionBook {
       System.out.println(name + " is not checked out\n");
     }
   }
-
 }

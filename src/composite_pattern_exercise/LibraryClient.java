@@ -9,42 +9,24 @@ public class LibraryClient {
     FictionBook fictionBookTwo = new FictionBook("The Great Gatsby", false);
 
     BookCollection bookCollection = new BookCollection();
-    bookCollection.addNonfictionBook(nonfictionBook);
-    bookCollection.addFictionBook(fictionBookOne);
-    bookCollection.addFictionBook(fictionBookTwo);
+    bookCollection.addBook(nonfictionBook);
+    bookCollection.addBook(fictionBookOne);
+    bookCollection.addBook(fictionBookTwo);
 
-    checkoutNonfictionBook(nonfictionBook);
-    checkoutFictionBook(fictionBookOne);
-    checkoutBookCollection(bookCollection);
+    checkoutBook(nonfictionBook);
+    checkoutBook(fictionBookOne);
+    checkoutBook(bookCollection);
 
-    returnNonfictionBook(nonfictionBook);
-    returnFictionBook(fictionBookOne);
-    returnBookCollection(bookCollection);
-
+    returnBook(nonfictionBook);
+    returnBook(fictionBookOne);
+    returnBook(bookCollection);
   }
 
-  public static void checkoutNonfictionBook(NonfictionBook nonfictionBook) {
-    nonfictionBook.checkout();
+  public static void checkoutBook(Books books) {
+    books.checkout();
   }
 
-  public static void checkoutFictionBook(FictionBook fictionBook) {
-    fictionBook.checkout();
+  public static void returnBook(Books books) {
+    books.returnBook();
   }
-
-  public static void checkoutBookCollection(BookCollection bookCollection) {
-    bookCollection.checkout();
-  }
-
-  public static void returnNonfictionBook(NonfictionBook nonfictionBook) {
-    nonfictionBook.returnBook();
-  }
-
-  public static void returnFictionBook(FictionBook fictionBook) {
-    fictionBook.returnBook();
-  }
-
-  public static void returnBookCollection(BookCollection bookCollection) {
-    bookCollection.returnBook();
-  }
-
 }

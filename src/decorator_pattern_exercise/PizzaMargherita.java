@@ -21,6 +21,4 @@ public class PizzaMargherita implements Pizza {
     return name;
   }
 
-
-
 }

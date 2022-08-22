@@ -23,5 +23,16 @@ public class ImageGallery {
     image8.display();
     image9.display();
     image10.display();
+
+    image1.display();
+    image2.display();
+    image3.display();
+    image4.display();
+    image5.display();
+    image6.display();
+    image7.display();
+    image8.display();
+    image9.display();
+    image10.display();
   }
 }

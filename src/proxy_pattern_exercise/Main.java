@@ -4,7 +4,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Inventory inventory = new SuperstoreInventory();
+    Inventory inventory = new SuperstoreInventoryProxy();
     Store store = new Store("Healthy Wholefoods", "Los Angeles", inventory);
 
     store.printName();
